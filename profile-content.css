@@ -1,0 +1,167 @@
+body {
+  background-color: #1d0a76;
+  font-family: monospace;
+  color: #00ff7f;
+  font-size: 17px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 200;
+  background-image: url("images/background2.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1, h2, h3 {
+  color: #00ff7f;
+  font-family: system-ui, sans-serif;
+}
+
+#logo {
+  border-radius: 50%;
+  margin-right: auto;
+  display: inline-block;
+  width: 20%;
+  border: 5px solid #ff00ff;
+}
+
+.form {
+  padding: 5px;
+  margin-bottom: 1px;
+}
+
+.emoji {
+  width: 60px;
+  height: 50px;
+}
+.card-white {
+  background-color: #1d0a76;
+  box-shadow: 4px 4px 3px #00ff7f;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #ff00ff;
+  margin: auto;
+  width: 50%;
+}
+
+.button {
+  background-color: #ff00ff;
+  color: #00ff7f;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 2px dashed #00ff7f;
+}
+
+a {
+  text-decoration: none;
+  color: #00ff7f;
+}
+
+a:hover {
+  color: #FFDC00;
+}
+
+.sml {
+  margin: 10px;
+  display: inline-block;
+  font-size: 50px;
+}
+
+/* Rainbow Animation */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.rainbow {
+  position: relative;
+  z-index: 0;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  width: 90%;
+}
+.rainbow::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #ff00ff;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#ff00ff, #36185d), linear-gradient(#2734ab, #00ff7f), linear-gradient(#6e1169, #ffa500), linear-gradient(#cedf7d, #0000ff);
+  -webkit-animation: rotate 4s linear infinite;
+          animation: rotate 4s linear infinite;
+}
+.rainbow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: #1d0a76;
+  border-radius: 5px;
+  /* -webkit-animation: opacityChange 3s infinite alternate;
+          animation: opacityChange 3s infinite alternate; */
+}
+
+@-webkit-keyframes opacityChange {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+/* End of Rainbow Animation */
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
